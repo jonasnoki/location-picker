@@ -8,7 +8,7 @@ import nearestPoint from "@turf/nearest-point";
 import mapboxgl from 'mapbox-gl';
 import './Map.css';
 
-mapboxgl.accessToken = pk.eyJ1Ijoiam9uYXNub2tpIiwiYSI6ImNrbWdraHRncDNmdTEyeWtuaW53bzUwaXMifQ._HxmVnG4t4A_1QEaddeAAQ;
+mapboxgl.accessToken = "pk.eyJ1Ijoiam9uYXNub2tpIiwiYSI6ImNrbWdraHRncDNmdTEyeWtuaW53bzUwaXMifQ._HxmVnG4t4A_1QEaddeAAQ";
 
 const Map = () => {
     const mapContainerRef = useRef(null);
@@ -20,7 +20,7 @@ const Map = () => {
     // Initialize map when component mounts
     useEffect(() => {
         const sw = new mapboxgl.LngLat(5, 40);
-        const ne = new mapboxgl.LngLat(16,55);
+        const ne = new mapboxgl.LngLat(16, 55);
         const lngLatBounds = new mapboxgl.LngLatBounds(sw, ne);
 
         const map = new mapboxgl.Map({
@@ -64,9 +64,9 @@ const Map = () => {
             showUserLocation: false
         });
 
-        geolocateControl.on('geolocate', (e)=> {
+        geolocateControl.on('geolocate', (e) => {
             const lngLat = {lng: e.coords.longitude, lat: e.coords.latitude};
-            if(!isLngLatInPark(lngLat)) {
+            if (!isLngLatInPark(lngLat)) {
                 window.alert("Your position is outside our delivery zone! :(")
             } else {
                 marker.setLngLat(lngLat);
