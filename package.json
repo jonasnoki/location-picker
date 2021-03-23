@@ -9,7 +9,8 @@
     "mapbox-gl": "2.1.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "^3.4.3"
+    "react-scripts": "^3.4.4",
+    "worker-loader": "^3.0.8"
   },
   "scripts": {
     "predeploy": "npm run build",

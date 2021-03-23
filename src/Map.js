@@ -4,10 +4,12 @@ import {parkPolygonInverse} from "./parkPolygonInverse";
 import pointInPolygon from "@turf/boolean-point-in-polygon";
 import explode from "@turf/explode";
 import nearestPoint from "@turf/nearest-point";
-
 import mapboxgl from 'mapbox-gl';
 import './Map.css';
 
+
+// eslint-disable-next-line import/no-webpack-loader-syntax
+mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
 mapboxgl.accessToken = "pk.eyJ1Ijoiam9uYXNub2tpIiwiYSI6ImNrbWdraHRncDNmdTEyeWtuaW53bzUwaXMifQ._HxmVnG4t4A_1QEaddeAAQ";
 
 const Map = () => {
@@ -28,7 +30,7 @@ const Map = () => {
             style: 'mapbox://styles/mapbox/streets-v11',
             center: [lng, lat],
             zoom: zoom,
-            maxBounds: lngLatBounds
+            maxBounds: lngLatBounds,
         });
 
 
