@@ -1,6 +1,7 @@
 {
-  "name": "basic",
+  "name": "location-picker",
   "version": "0.1.0",
+  "homepage": "http://jonasnoki.github.io/location-picker",
   "dependencies": {
     "@turf/boolean-point-in-polygon": "^6.3.0",
     "@turf/explode": "^6.3.0",
@@ -11,6 +12,8 @@
     "react-scripts": "^3.4.3"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build"
   },
