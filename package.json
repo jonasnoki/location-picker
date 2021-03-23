@@ -6,7 +6,6 @@
     "@turf/boolean-point-in-polygon": "^6.3.0",
     "@turf/explode": "^6.3.0",
     "@turf/nearest-point": "^6.3.0",
-    "dotenv": "^8.2.0",
     "mapbox-gl": "2.1.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

@@ -8,8 +8,7 @@ import nearestPoint from "@turf/nearest-point";
 import mapboxgl from 'mapbox-gl';
 import './Map.css';
 
-mapboxgl.accessToken =
-    'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4M29iazA2Z2gycXA4N2pmbDZmangifQ.-g_vE53SD2WrJ6tFX7QHmA';
+mapboxgl.accessToken = pk.eyJ1Ijoiam9uYXNub2tpIiwiYSI6ImNrbWdraHRncDNmdTEyeWtuaW53bzUwaXMifQ._HxmVnG4t4A_1QEaddeAAQ;
 
 const Map = () => {
     const mapContainerRef = useRef(null);
