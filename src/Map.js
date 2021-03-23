@@ -27,7 +27,7 @@ const Map = () => {
 
         const map = new mapboxgl.Map({
             container: mapContainerRef.current,
-            style: 'mapbox://styles/mapbox/streets-v11',
+            style: 'mapbox://styles/mapbox/light-v10',
             center: [lng, lat],
             zoom: zoom,
             maxBounds: lngLatBounds,
@@ -47,7 +47,7 @@ const Map = () => {
                 'source': 'park',
                 'layout': {},
                 'paint': {
-                    'fill-color': '#088',
+                    'fill-color': '#000000',
                     'fill-opacity': 0.6
                 }
             });
@@ -55,7 +55,8 @@ const Map = () => {
 
 
         const marker = new mapboxgl.Marker({
-            draggable: true
+            draggable: true,
+            color: '#000000',
         }).setLngLat([lng, lat]).addTo(map);
 
 
